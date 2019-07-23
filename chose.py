@@ -2,11 +2,8 @@ import sys, os
 import json, codecs
 import itertools
 import logging
+from jsonprocess import get_data
 
-def get_data(name):
-    with codecs.open(os.path.join('.','data',name+'.json'),'r','utf-8') as f:
-        data = json.load(f)
-    return data
 
 class Lineup_Selector(object):
     def __init__(self):

@@ -24,6 +24,11 @@ def json_trans(path):
     with open(path, 'w') as f:
         json.dump(d,f)
 
+def get_data(name):
+    with codecs.open(os.path.join('.','data',name+'.json'),'r','utf-8') as f:
+        data = json.load(f)
+    return data
+    
 if __name__ == '__main__':
     #heros2buffs('hero.json','buffs.json')
     pass
